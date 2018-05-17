@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEY车品-VV5-安全</title>
+    <link rel="stylesheet" href="css/vv5_aq.css">
+</head>
+<body>
+<!--引用外部头文件-->
+<embed src="head.html" width="100%" height="110px" class="head_index" id="header_w"></embed>
+<!--网页内容-->
+<section>
+    <div class="nav">
+        <a href="vv5.html">概览</a>
+        <a href="vv5_wg.html">外观</a>
+        <a href="vv5_ns.html">内饰</a>
+        <a href="vv5_aq.html">安全</a>
+        <a href="vv5_kj.html">科技</a>
+        <a href="vv5_ck.html">操控</a>
+        <a href="vv5_pz.html">配置与价格</a>
+        <a href="#">预约试驾</a>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_aq/bg_01.jpg"/>
+        <div class="txt txt1">
+            <div class="txt_title">
+                安 ◆ 享旅程 安全
+            </div>
+            <div class="txt_content">
+                青春就是一场冒险，面对各种挑战，<br>
+                你必须勇往直前！准备好了吗？<br>
+                握紧扶手，体验速度带来的淋漓尽致，<br>
+                让Collie智慧安全系统守护你的每一次抵达。
+            </div>
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_aq/bg_02.jpg"/>
+        <div class="txt txt2">
+            <div class="txt_title">
+                安全不止守护 ◆ <br>
+                也是对可能的危险 主动出击
+            </div>
+            <div class="txt_content">
+                Collie智慧安全系统，以忠实机智的牧羊犬之名，<br>
+                守护着车辆行人和车内乘员的安全，<br>
+                您可实时监测车辆状态并协同诸多电子系统及车身组件,<br>
+                来保障车辆及人员的安全，<br>
+                让你的旅途时刻与安全相伴
+            </div>
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_aq/bg_03.jpg"/>
+        <div class="txt_title title1">
+            强大 ◆ 是可以经得起 时间考验的力量
+        </div>
+        <div class="txt_content content1">
+            VV5车身材料选用宝钢、德国蒂森等世界一流钢厂钢材，配备德国BASF、美国PPG等世界级供应商提供高性能油漆，<br>
+            经历层层工艺以及苛刻考验，为您打造经得起时间历练的12年无锈穿的安全车身。
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_aq/bg_04.jpg"/>
+        <div class="txt txt3">
+            <div class="txt_title">
+                用科技 ◆ 守护 生命
+            </div>
+            <div class="txt_content">
+                对我们来说，生命就是一种信仰，<br>
+                无论多么豪华的配置，<br>
+                脱离了安全，都是没有意义的。<br>
+                VV5系列配备13项高科技主动安全，<br>
+                从启动汽车的一刻，一切安全就已为你准备到位！
+            </div>
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_aq/bg_05.jpg"/>
+        <div class="txt_title title1" style="color:#000;">
+            年轻可以偶尔 ◆ 任性 行车需要绝对安全
+        </div>
+        <div class="txt_content content1" style="color:#000;">
+            TPMS智能胎压监测让您实时掌握车胎压力，前后雷达智能识别潜在的碰撞危险，预知让年轻的旅程更加自如；<br>
+            VV5全系标配6安全气囊，宽广的保护范围将伤害降至最低，年轻需要更多的机会去实现梦想。
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_aq/bg_06.jpg"/>
+        <div class="txt_title title2">
+            行人 ◆ 乘员与车辆 为每个人的安全，全力以赴
+        </div>
+        <div class="txt_content content1">
+            我们认为，真正的安全不仅来自车内，全新“3DP” 安全车身设计理念，以乘员、行人、车辆三个维度的保护设计，<br>
+            铸就旅途中的全方位安全保护。
+        </div>
+    </div>
+    <div class="jing_xs">
+        <div class="jxs">
+            <div class="jxs_title">
+                查找最近经销商
+            </div>
+            <p>
+                无论你身在何处，通过WEY网络，即可更快更方便地找到您的首选经销商，轻松享受各项专属服务
+            </p>
+            <select id="one" onchange="func(this.value)" class="liandong">
+                <option value="">省/市</option>
+                <option value="0">浙江省</option>
+                <option value="1">广东省</option>
+                <option value="2">福建省</option>
+                <option value="3">四川省</option>
+            </select>
+            <select id="two" class="liandong1">
+                <option value="">市/区</option>
+            </select>
+        </div>
+    </div>
+</section>
+<script>
+    /*省市联动*/
+    var two = document.getElementById('two');
+    city = [];//申明
+    //定义二级数据
+    city[0] = ['杭州市',"宁波市","温州市","嘉兴市"];
+    city[1] = ['广州市',"东莞市","珠海市","汕头市"];
+    city[2] = ['厦门市',"福州市","三明市","泉州市"];
+    city[3] = ['成都市',"南充市","绵阳市","德阳市"];
+    function func(m){
+        two.length = 1;
+        //遍历生产option选项
+        for (var i = 0; i < city[m].length; i++) {
+
+            //创建一个option 把数据存储在option
+            var op = new Option(city[m][i],i);
+
+            //把带有数据的option 添加到第二个select
+            two.add(op);
+        }
+    }
+</script>
+<!--回到顶部-->
+<div id="test" style=" position:fixed; right:0;bottom:50px;">
+    <img src="images/top.png"/></div>
+<script>
+    document.getElementById("test").onclick = function(){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+</script>
+<!--引用外部foot文件-->
+<embed src="foot.html" width="100%" height="322" id="foot_w"></embed>
+</body>
+</html>

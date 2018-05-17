@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEY车品-VV5-内饰</title>
+    <link rel="stylesheet" href="css/vv5_ns.css">
+</head>
+<body>
+<!--引用外部头文件-->
+<embed src="head.html" width="100%" height="110px" class="head_index" id="header_w"></embed>
+<!--网页内容-->
+<section>
+    <div class="nav">
+        <a href="vv5.html">概览</a>
+        <a href="vv5_wg.html">外观</a>
+        <a href="vv5_ns.html">内饰</a>
+        <a href="vv5_aq.html">安全</a>
+        <a href="vv5_kj.html">科技</a>
+        <a href="vv5_ck.html">操控</a>
+        <a href="vv5_pz.html">配置与价格</a>
+        <a href="#">预约试驾</a>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_ns/bg_01.jpg"/>
+        <div class="text_content content1">
+            奢 ◆ 享生活
+        </div>
+        <div class="text_content content2">
+            运动与奢华不期而遇，极佳的视觉表现、舒适的乘坐体验以及细腻的声音展现，让血脉喷张的运动没有激情后的身心疲惫，<br>
+            但存令人心旷神怡的愉悦体验。
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_ns/bg_02.jpg"/>
+        <div class="txt_contentl txt1">
+            <div class="content3">
+                质感，是对 ◆ 年轻 最好的表达！
+            </div>
+            <div class="content4">
+                年轻，不能是一段匆匆掠过的记忆，每一天，每一段路，<br>
+                都是在追求生命中最好的质感！<br>
+                VV5系列，用最美好的质感，奠定车内豪华、舒适、精致的氛围，<br>
+                陪伴你的每一段旅程。
+            </div>
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_ns/bg_03.jpg"/>
+        <div class="txt_contentl txt2">
+            <div class="content3">
+                健康 ◆ 有时候是一种 享受特权
+            </div>
+            <div class="content4">
+                在VV5的车内，我们为你提供优质空气的享受特权！<br>
+                每一个用料都力求超过国际环保标准的最高要求，<br>
+                车内空气净化器采用创新空气净化技术，<br>
+                让每一口空气，都符合你最高标准的要求！
+            </div>
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_ns/bg_04.jpg"/>
+        <div class="txt3">
+            <div class="content3">
+                静下来，让 ◆ 青春 好好沉淀
+            </div>
+            <div class="content5">
+                年轻的路上，不只有喧嚣与热闹。<br>
+                VV5多种先进且环保的NVH材料以及施工工艺，让你在极速狂奔中，享受宁静的一刻。<br>
+                静下来吧，与自己独处，在最美好的时光里，与自己相遇。
+            </div>
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_ns/bg_05.jpg"/>
+        <div class="txt_contentl txt4">
+            <div class="content3">
+                你的 ◆ 心情 主打色
+            </div>
+            <div class="content4">
+                激动昂扬，睿智平静，浪漫温馨，你的心情的主打色不断变换，<br>
+                VV5红色、香槟金、蓝色三种色彩座舱氛围灯，<br>
+                驾驭心情，驾驭你的心情主打色！
+            </div>
+        </div>
+    </div>
+    <div class="jing_xs">
+        <div class="jxs">
+            <div class="jxs_title">
+                查找最近经销商
+            </div>
+            <p>
+                无论你身在何处，通过WEY网络，即可更快更方便地找到您的首选经销商，轻松享受各项专属服务
+            </p>
+            <select id="one" onchange="func(this.value)" class="liandong">
+                <option value="">省/市</option>
+                <option value="0">浙江省</option>
+                <option value="1">广东省</option>
+                <option value="2">福建省</option>
+                <option value="3">四川省</option>
+            </select>
+            <select id="two" class="liandong1">
+                <option value="">市/区</option>
+            </select>
+        </div>
+    </div>
+</section>
+<script>
+    /*省市联动*/
+    var two = document.getElementById('two');
+    city = [];//申明
+    //定义二级数据
+    city[0] = ['杭州市',"宁波市","温州市","嘉兴市"];
+    city[1] = ['广州市',"东莞市","珠海市","汕头市"];
+    city[2] = ['厦门市',"福州市","三明市","泉州市"];
+    city[3] = ['成都市',"南充市","绵阳市","德阳市"];
+    function func(m){
+        two.length = 1;
+        //遍历生产option选项
+        for (var i = 0; i < city[m].length; i++) {
+
+            //创建一个option 把数据存储在option
+            var op = new Option(city[m][i],i);
+
+            //把带有数据的option 添加到第二个select
+            two.add(op);
+        }
+    }
+</script>
+<!--回到顶部-->
+<div id="test" style=" position:fixed; right:0;bottom:50px;">
+    <img src="images/top.png"/></div>
+<script>
+    document.getElementById("test").onclick = function(){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+</script>
+<!--引用外部foot文件-->
+<embed src="foot.html" width="100%" height="322" id="foot_w"></embed>
+</body>
+</html>

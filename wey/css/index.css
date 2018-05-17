@@ -1,0 +1,157 @@
+*{
+    margin:0 auto;
+    padding:0;
+    list-style-type: none;
+}
+
+/*调用外部头*/
+.head_index{
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10086;
+}
+.head_index:hover{
+    height:410px;
+}
+section{
+    font-size: 0;
+}
+/*轮播图*/
+#parents{
+    width:100%;
+}
+.carousel-inner img{
+    width:100%;
+}
+/*vv5s js效果*/
+.car_product{
+    width:60%;
+    margin:0 auto;
+}
+.product_vv5{
+    width:50%;
+    text-align: center;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float:right;
+}
+.box{
+    width:100%;
+    height:auto;
+    position:relative;
+    top:0;
+    left:0;
+}
+.box_h{
+    width:100%;
+    height:170px;
+    background-color: #f2f2f2;
+    position:absolute;
+    top:240px;
+    left:0;
+    z-index: -1;
+}
+.text_infor{
+    font-size: 20px;
+    height:40px;
+    color:#987756;
+}
+.btn_infor{
+    margin:0 auto;
+    line-height: 50px;
+    font-size:16px;
+    width:200px;
+    height:50px;
+    color:black;
+    border:3px solid black;
+    cursor: pointer;
+}
+.btn_infor:hover{
+    color:white;
+    background-color: black;
+}
+/*匠心之美·执着不悔*/
+.originality{
+    height:auto;
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    position:relative;
+}
+.kv5{
+    width:100%;
+}
+.txt_title{
+    width:100%;
+    font-size:40px;
+    position:absolute;
+    top:50px;
+    left:0;
+}
+.txt_content{
+    width:100%;
+    font-size: 18px;
+    position:absolute;
+    top:150px;
+    left:0;
+}
+.dw{
+    position:absolute;
+    top:80%;
+    left:46%;
+}
+/*经销商查询*/
+.Distributor{
+    height:auto;
+    width:100%;
+    position:relative;
+}
+.txt_dis{
+    font-size: 36px;
+    position:absolute;
+    top:120px;
+    left:400px;
+}
+.dis_phone{
+    font-size: 18px;
+    position:absolute;
+    top:180px;
+    left:400px;
+    color:#5c5c5c;
+    border-bottom: 1px solid black;
+}
+.liandong{
+    top:280px;
+}
+.liandong1{
+    top:330px;
+}
+#one,#two{
+    position:absolute;
+    left:400px;
+    height:40px;
+    width:400px;
+    font-size: 16px;
+    background: transparent;
+}
+
+/*窗口自适应*/
+@media screen and (max-width:1200px){/*ipad*/
+    #parents{
+        width:100%;
+        min-width:1200px;
+    }
+    #header_w,#foot_w{
+        width:100%;
+        min-width:1200px;
+    }
+}
+
+

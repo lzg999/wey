@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEY车品-VV5-配置与价格</title>
+    <link rel="stylesheet" href="css/vv5_pz.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<!--引用外部头文件-->
+<embed src="head.html" width="100%" height="110px" class="head_index" id="header_w"></embed>
+<!--网页内容-->
+<section class="content">
+    <div class="nav">
+        <a href="vv5.html">概览</a>
+        <a href="vv5_wg.html">外观</a>
+        <a href="vv5_ns.html">内饰</a>
+        <a href="vv5_aq.html">安全</a>
+        <a href="vv5_kj.html">科技</a>
+        <a href="vv5_ck.html">操控</a>
+        <a href="vv5_pz.html">配置与价格</a>
+        <a href="#">预约试驾</a>
+    </div>
+    <h1>配置与价格</h1>
+    <div>"●"表示有此配,"×"表示无此配置,"○"表示选装配置</div>
+    <div class="car">
+        <div>车型</div>
+        <div>VV5超豪型</div>
+        <div>VV5旗舰型</div>
+    </div>
+    <section>
+    <div class="price">
+        <div>官方指导价</div>
+        <div>150,,000</div>
+        <div>163,000</div>
+    </div>
+        <div class="menu">整车参数表</div>
+        <div class="sub">
+            <div class="names"></div>
+            <div class="parameter"></div>
+            <div class="parameter"></div>
+        </div>
+
+        <div class="menu">WEY ● 安全</div>
+        <div class="sub aq">
+            <div class="names"></div>
+            <div class="parameter"></div>
+            <div class="parameter"></div>
+        </div>
+        <div class="menu">WEY ● 科技</div>
+        <div class="sub kj">
+            <div class="names"></div>
+            <div class="parameter"></div>
+            <div class="parameter"></div>
+        </div>
+        <div class="menu">WEY ● 外观</div>
+        <div class="sub wg">
+            <div class="names"></div>
+            <div class="parameter"></div>
+            <div class="parameter"></div>
+        </div>
+        <div class="menu">WEY ● 内饰</div>
+        <div class="sub ns">
+            <div class="names"></div>
+            <div class="parameter"></div>
+            <div class="parameter"></div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $(".sub").hide();
+                $(".menu").click(function () {
+                    $(this).next().slideToggle().siblings(".sub").slideUp();
+                });
+            });
+        </script>
+        <script>
+            var xmlhttp;//全局的对象的变量
+            var parameter=document.querySelectorAll(".sub .parameter");
+            if(window.XMLHttpRequest) {//判断浏览器的兼容性
+                xmlhttp=new XMLHttpRequest();//new 对象，针对高版本
+            }else{
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");//IE6,IE5
+            }
+            xmlhttp.open('GET','php/vv5_pz.php',true);//请求的方式 请求的URL  异步(true)或者同步(false)
+            xmlhttp.send();//向服务器发送请求
+            xmlhttp.onreadystatechange=function () {//响应事件
+                if(xmlhttp.readyState==4 &&xmlhttp.status==200){//响应状态
+                    var json=JSON.parse(xmlhttp.responseText)//响应数据
+                    var str="";
+                    for(var i=0;i<parameter.length;i++)
+                    {
+                        for(var j=0;j<json.length;j++)
+                        {
+                            if(i==j){
+
+
+                            parameter[i].innerHTML="<li>"+json[j].carSize+"</li>" +
+                            "<li class='ss'>"+json[j].carZhouJ+"</li>"+
+                            "<li>"+json[j].carJianX+"</li>"+
+                             "<li>"+json[j].carFDJLeix+"</li>"+
+                              "<li>"+json[j].carFDJXingH+"</li>"+
+                            "<li>"+json[j].carFDJXingS+"</li>"+
+                            "<li>"+json[j].carPaiL+"</li>"+
+                            "<li>"+json[j].carGongL+"</li>"+
+                            "<li>"+json[j].carMaxNiuj+"</li>"+
+                            "<li>"+json[j].carBianSuQ+"</li>"+
+                            "<li>"+json[j].carTimer+"</li>"+
+                            "<li>"+json[j].carMaxV+"</li>"+
+                            "<li>"+json[j].carYou+"</li>"+
+                            "<li>"+json[j].carBiaoZ+"</li>"+
+                            "<li>"+json[j].carBGLYou+"</li>"+
+                            "<li>"+json[j].carYouSize+"</li>"+
+                            "<li>"+json[j].carXuanG+"</li>"+
+                            "<li>"+json[j].carZhiD+"</li>"+
+                            "<li>"+json[j].carZhuanX+"</li>"+
+                            "<li>"+json[j].carZhiLiang+"</li>"+
+                            "<li>"+json[j].carLunTGG+"</li>";
+                            }
+                        }
+                    }
+                }
+            };
+            <!--定义数组-->
+            var parameters=["长×宽×高（mm）","轴距（mm）","离地间隙（mm）","发动机类型","发动机型号","发动机型式","排量(ml)","额定功率(Kw/rpm)","最大扭矩(N•m/rpm)","变速器型式","0-100km/h加速时间（s）","最高车速(km/h)","燃油标号","排放标准","百公里综合工况油耗（L）","油箱容量（L）","悬挂系统（前/后）","制动系统","转向系统型式","整备质量（kg）","轮胎规格"];
+            var security=["3DP高强度安全车身","铝合金前机盖","ACC自适应巡航","FCW前碰撞预警","AEB自动刹车系统","360全景监视","LCA并线辅助","CTA倒车侧向警告","DOW开门预警","LKA车道保持","LDW车道偏离预警","半自动泊车辅助","驾驶员疲劳提醒","EPB按键式电子驻车系统","AUTO HOLD自动驻车系统","HHC上坡辅助系统","HDC陡坡缓降系统","ESP车身稳定控制系统","TCS牵引力控制系统","ABS刹车防抱死系统","EBD电子制动力分配系统","BA智能刹车辅助系统","BOS刹车优先系统","TPMS智能胎压监测系统","EDR事故数据记录仪","前排双安全气囊","主/副驾座椅侧气囊","前后一体式头部侧气帘","前后排三点式预紧式安全带","后排两侧限力式安全带","安全带未系提醒（前排）","前驻车雷达","后倒车雷达","智能防盗报警系统","碰撞自动解锁功能","ISOFIX国际标准儿童座椅固定装置"];
+            var security_P=["●","●","●","●","●","●","●","●","●","×","×","×","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●"];
+            var security_P1=["●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●"];
+            var technology=["12扬声器Infinity品牌音响","独立功放","高清流媒体广角内后视镜","感应式电动后背门（带位置记忆及防夹）","智能语音识别","12.3寸全彩高清数字虚拟组合仪表","3.5寸彩色组合仪表","9寸TFT彩色液晶触摸显示屏","MP5影音娱乐系统","GPS智能导航系统","WEY智享互联","发动机远程启动","空调远程控制","呼叫服务（I-call、B-call、E-call）","生活服务预定","车机手机互联","人机交互系统","无钥匙进入系统","发动机一键启动","随速音量调节"];
+            var technology_P=["●","●","●","●","●","×","●","●","●","●","●","●","●","●","●","●","●","●","●","●"];
+            var technology_P1=["●","●","●","●","●","●","×","●","●","●","●","●","●","●","●","●","●","●","●","●"];
+            var appearance=["全LED智能大灯","大灯延时关闭","LED竖型前雾灯","LED雾灯转向辅助照明","LED后组合灯","LED后雾灯","LED高位制动灯","米其林 Latitude Sport 3轮胎","固特异 Eagle F1轮胎","19英寸鹰眼式铝合金轮毂","20英寸鲸骨式铝合金黑色轮毂","20英寸鲸骨式铝合金银色轮毂","全景天幕","静音玻璃（前门、前风挡）","隐私玻璃（后门、后三角窗）","外后视镜（镭射迎宾）","后视镜集成LED转向灯","电动外后视镜（带除霜）","前雨量感应无骨雨刮","外后视镜倒车记忆辅助","后牌照灯装饰板亮条（高亮黑）","后牌照灯装饰板亮条（哑光银）"];
+            var appearance_P=["●","●","●","●","●","●","●","●","×","●","×","×","●","●","●","●","●","●","●","×","●","○"];
+            var appearance_P1=["●","●","●","●","●","●","●","×","●","×","●","○","●","●","●","●","●","●","●","●","●","○"];
+            var Interior = ['主驾座椅12向电动调节','主驾驶座椅三组记忆功能','主驾驶座椅迎宾','高级运动真皮座椅','高级运动皮质座椅','负离子空气净化器','双温区独立控制自动空调系统','AQS空气质量自动控制系统','主驾座椅通风','前排主副座椅加热','副驾驶座椅4向电动调节','多功能真皮运动方向盘','拨片换挡','方向盘四向调节','方向盘转向力度可调','多种驾驶模式调节','LED动感氛围灯','车外温度显示','PM2.5空调滤芯','四门电动车窗一键升降（带防夹）','LED四门门灯','冷光迎宾门槛','金属装饰踏板及脚歇','后遮物帘','12V车载电源','USB/AUX /SD卡接口','黑色内饰','黑棕内饰','黑红内饰'];
+            var Interior_P = ["●","×","×","○￥2000","●","●","●","●","○￥1000","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","○","●","○"];
+            var Interior_P1 = ["●","●","●","●","×","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","●","○","○"];
+            //var names=document.querySelector(".sub .names");
+            var sub=document.querySelectorAll(".sub .names");
+            var sub_p=document.querySelectorAll(".sub .parameter");
+            console.log(Interior.length);
+            //第一组数据
+            var str1="";
+            for(var k=0;k<parameters.length;k++)
+            {
+                str1+="<li>"+parameters[k]+"</li>";
+            }
+            sub[0].innerHTML=str1;
+            //第二组数据
+            var str2="";
+            var str3="";
+            var str4="";
+            for(var n = 0 ; n<security.length;n++){
+                str2+="<li>"+security[n]+"</li>";
+                str3+="<li>"+security_P[n]+"</li>";
+                str4+="<li>"+security_P1[n]+"</li>";
+            }
+            sub[1].innerHTML=str2;
+            sub_p[2].innerHTML=str3;
+            sub_p[3].innerHTML=str4;
+            //第三组数据
+            var str5 = "";
+            var str6 = "";
+            var str7 = "";
+            for(var m = 0 ; m<technology.length;m++){
+                str5+="<li>"+technology[m]+"</li>";
+                str6+="<li>"+technology_P[m]+"</li>";
+                str7+="<li>"+technology_P1[m]+"</li>";
+            }
+            sub[2].innerHTML=str5;
+            sub_p[4].innerHTML=str6;
+            sub_p[5].innerHTML=str7;
+            //第四组数据
+            var str8 = "";
+            var str9 = "";
+            var str10 = "";
+            for(var z = 0 ; z<appearance.length;z++){
+                str8+="<li>"+appearance[z]+"</li>";
+                str9+="<li>"+appearance_P[z]+"</li>";
+                str10+="<li>"+appearance_P1[z]+"</li>";
+            }
+            sub[3].innerHTML=str8;
+            sub_p[6].innerHTML=str9;
+            sub_p[7].innerHTML=str10;
+            //第五组数据
+            var str11 = "";
+            var st12 = "";
+            var str13 = "";
+            for(var a = 0 ; a<Interior.length;a++){
+                str11+="<li>"+Interior[a]+"</li>";
+                st12+="<li>"+Interior_P[a]+"</li>";
+                str13+="<li>"+Interior_P1[a]+"</li>";
+            }
+            sub[4].innerHTML=str11;
+            sub_p[8].innerHTML=st12;
+            sub_p[9].innerHTML=str13;
+        </script>
+    </section>
+    <!--最近经销商-->
+    <div class="jing_xs">
+        <div class="jxs">
+            <div class="jxs_title">
+                查找最近经销商
+            </div>
+            <p>
+                无论你身在何处，通过WEY网络，即可更快更方便地找到您的首选经销商，轻松享受各项专属服务
+            </p>
+            <select id="one" onchange="func(this.value)" class="liandong">
+                <option value="">省/市</option>
+                <option value="0">浙江省</option>
+                <option value="1">广东省</option>
+                <option value="2">福建省</option>
+                <option value="3">四川省</option>
+            </select>
+            <select id="two" class="liandong1">
+                <option value="">市/区</option>
+            </select>
+        </div>
+    </div>
+</section>
+<script>
+    /*省市联动*/
+    var two = document.getElementById('two');
+    city = [];//申明
+    //定义二级数据
+    city[0] = ['杭州市',"宁波市","温州市","嘉兴市"];
+    city[1] = ['广州市',"东莞市","珠海市","汕头市"];
+    city[2] = ['厦门市',"福州市","三明市","泉州市"];
+    city[3] = ['成都市',"南充市","绵阳市","德阳市"];
+    function func(m){
+        two.length = 1;
+        //遍历生产option选项
+        for (var i = 0; i < city[m].length; i++) {
+
+            //创建一个option 把数据存储在option
+            var op = new Option(city[m][i],i);
+
+            //把带有数据的option 添加到第二个select
+            two.add(op);
+        }
+    }
+</script>
+<!--回到顶部-->
+<div id="test" style=" position:fixed; right:0;bottom:50px;">
+    <img src="images/top.png"/></div>
+<script>
+    document.getElementById("test").onclick = function(){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+</script>
+<!--引用外部foot文件-->
+<embed src="foot.html" width="100%" height="322" id="foot_w"></embed>
+</body>
+</html>

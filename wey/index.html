@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>WEY格调-轻奢气质</title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/foot.css">
+</head>
+<body>
+<!--引用外部头文件-->
+<embed src="head.html" width="100%" height="110px" class="head_index" id="header_w"></embed>
+<!--网页内容-->
+<section id="parents">
+    <!--轮播图-->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+		<!-- 轮播（Carousel）指标 -->
+		<ol class="carousel-indicators solid_dw">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+			<li data-target="#myCarousel" data-slide-to="5"></li>
+			<li data-target="#myCarousel" data-slide-to="6"></li>
+		</ol>
+		<!-- 轮播（Carousel）项目 -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="images/banner/1.jpg"/>
+			</div>
+			<div class="item">
+				<img src="images/banner/2.jpg"/>
+			</div>
+			<div class="item">
+				<img src="images/banner/3.jpg"/>
+			</div>
+			<div class="item">
+				<img src="images/banner/4.jpg"/>
+			</div>
+			<div class="item">
+				<img src="images/banner/5.jpg"/>
+			</div>
+			<div class="item">
+				<img src="images/banner/6.jpg"/>
+			</div>
+			<div class="item">
+				<img src="images/banner/7.jpg"/>
+			</div>
+		</div>
+	</div>
+    <!--vv5 vv7js效果-->
+    <div class="box">
+        <div class="car_product">
+            <div class="product_vv5 fl">
+                <img src="images/15082369555498.png" height="237" width="373" id="im1"/>
+                <div class="text_infor">
+                    RMB:150,000元起
+                </div>
+                <div class="text_infor">
+                    年轻 安全 豪华
+                </div>
+                <div class="btn_infor" id="btn_1">
+                    了解详情
+                </div>
+            </div>
+            <div class="product_vv5 fr">
+                <img src="images/15082370109520.png" height="237" width="373" id="im2"/>
+                <div class="text_infor">
+                    RMB:169,800元起
+                </div>
+                <div class="text_infor">
+                    自信 动感 时尚 享受
+                </div>
+                <div class="btn_infor" id="btn_2">
+                    了解详情
+                </div>
+            </div>
+        </div>
+        <!--灰色条-->
+        <div class="box_h"></div>
+    </div>
+    <div style="clear: both;"></div>
+    <!--匠心之美·执着不悔-->
+    <div class="originality">
+        <img src="images/kv5.jpg" class="kv5"/>
+        <div class="txt_title">匠心之美 &nbsp;·&nbsp; 执着不悔</div>
+        <div class="txt_content">
+            我们满怀敬畏之心，以态度、以信念、以情怀，成就他的低调不失奢华<br>
+            倾尽所能，不遗余力，践行一场伟大的造车之梦
+        </div>
+        <div class="btn_infor dw">
+            了解详情
+        </div>
+    </div>
+    <!--经销商查询-->
+    <div class="Distributor">
+        <img src="images/15082370622805.jpg" class="kv5"/>
+        <div class="txt_dis">查找附近经销商</div>
+        <div class="dis_phone">如需获取销售、专业建议等帮助，请联系您附近的经销商，或致电贵宾专线：400-666-6616</div>
+        <select id="one" onchange="func(this.value)" class="liandong">
+            <option value="">省/市</option>
+            <option value="0">浙江省</option>
+            <option value="1">广东省</option>
+            <option value="2">福建省</option>
+            <option value="3">四川省</option>
+        </select>
+        <select id="two" class="liandong1">
+            <option value="">市/区</option>
+        </select>
+    </div>
+</section>
+<!--回到顶部-->
+<div id="test" style=" position:fixed; right:0;bottom:50px;">
+    <img src="images/top.png"/></div>
+<script>
+    document.getElementById("test").onclick = function(){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+</script>
+<!--引用外部foot文件-->
+<!--服务内容-->
+<div class="service">
+    <div class="service_item">
+        <ul>
+            <li class="list_t"><a href="#">WEY格调</a></li>
+            <li><a href="#">标识渊源</a></li>
+            <li><a href="#">轻奢气质</a></li>
+            <li><a href="#">匠心底蕴</a></li>
+            <li><a href="#">品牌愿景</a></li>
+        </ul>
+        <ul>
+            <li class="list_t"><a href="#">WEY车品</a></li>
+            <li><a href="vv5.html">VV5</a></li>
+            <li><a href="#">VV7</a></li>
+            <li><a href="#">P8</a></li>
+        </ul>
+        <ul>
+            <li class="list_t"><a href="#">WEY体验</a></li>
+            <li><a href="#">预约试驾</a></li>
+            <li><a href="#">经销商查询</a></li>
+            <li><a href="#">虚拟展厅</a></li>
+            <li><a href="#">车型对比</a></li>
+            <li><a href="#">购车计算器</a></li>
+            <li><a href="#">专享金融</a></li>
+        </ul>
+        <ul>
+            <li class="list_t"><a href="#">WEY服务</a></li>
+            <li><a href="#">尊享服务</a></li>
+            <li><a href="#">在线顾问</a></li>
+            <li><a href="#">配件价格查询</a></li>
+        </ul>
+        <ul>
+            <li class="list_t"><a href="#">WEY动态</a></li>
+            <li><a href="#">最新动态</a></li>
+            <li><a href="#">主题活动</a></li>
+            <li><a href="#">媒体报道</a></li>
+            <li><a href="#">下载中心</a></li>
+        </ul>
+        <ul>
+            <li class="list_t"><a href="#">WEY商城</a></li>
+
+        </ul>
+        <ul>
+            <li class="list_t"><a href="#">WEY智联</a></li>
+            <li><a href="#">WEY安全</a></li>
+            <li><a href="#">WEY智能</a></li>
+            <li><a href="#">WEY尊享</a></li>
+        </ul>
+        <ul>
+            <li class="list_t"><a href="#">English<br>Version</a></li>
+        </ul>
+        <ul>
+            <li class="list_t"><a href="#">更多</a></li>
+            <li><a href="#">经销商招募</a></li>
+            <li><a href="#">招贤纳士</a></li>
+            <li><a href="#">法律声明</a></li>
+            <li><a href="#">环保信息公开</a></li>
+            <li><a href="#">维修信息公开</a></li>
+        </ul>
+    </div>
+</div>
+<div class="foot_last">
+    长城汽车股份有限公司徐水魏派分公司   冀ICP备 05008632   贵宾专线：400-666-6616
+</div>
+</body>
+</html>

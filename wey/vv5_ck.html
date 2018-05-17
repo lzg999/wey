@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WEY车品-VV5-操控</title>
+        <link rel="stylesheet" href="css/vv5_ck.css">
+    </head>
+<body>
+<!--引用外部头文件-->
+<embed src="head.html" width="100%" height="110px" class="head_index" id="header_w"></embed>
+<!--网页内容-->
+<section>
+    <div class="nav">
+        <a href="vv5.html">概览</a>
+        <a href="vv5_wg.html">外观</a>
+        <a href="vv5_ns.html">内饰</a>
+        <a href="vv5_aq.html">安全</a>
+        <a href="vv5_kj.html">科技</a>
+        <a href="vv5_ck.html">操控</a>
+        <a href="vv5_pz.html">配置与价格</a>
+        <a href="#">预约试驾</a>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_ck/bg_01.jpg"/>
+        <div class="txt_title title1">
+            劲 ◆ 享驾控 操控
+        </div>
+        <div class="txt_content content1">
+            操控人生的乐趣，从操控一段旅程开始。VV5系列，以强大的动力和对驾驶体验细节的考究，<br>
+            为你智造充满乐趣的驾控体验，让你的旅途，充满悸动与喜悦！
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_ck/bg_02.jpg"/>
+        <div class="txt txt1">
+            <div class="txt_title">
+                把握方向 ◆ 更把握 豪华质感
+            </div>
+            <div class="txt_content">
+                用年轻，去把握人生的方向，用豪华，把握质感的方向！<br>
+                以头层真皮包裹的VV5多功能运动方向盘，<br>
+                集成多媒体控制、巡航控制等功能，<br>
+                匹配EPS电动助力调节功能，<br>
+                以细腻的皮质和令人赞叹的助力感受触动你内心对豪华的向往。
+            </div>
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_ck/bg_03.jpg"/>
+        <div class="txt txt2">
+            <div class="txt_title">
+                让青春 ◆ 尽情 甩尾
+            </div>
+            <div class="txt_content">
+                超长轴距的车身结构，以及车尾布局的巧妙构思，<br>
+                让你在享受大空间的同时，<br>
+                尽情享受操控性带来的驾驭乐趣！
+            </div>
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_ck/bg_04.jpg"/>
+        <div class="txt txt3">
+            <div class="txt_title">
+                青春，在最强劲的 ◆ 内心中 爆发
+            </div>
+            <div class="txt_content">
+                年轻的爆发力，在新一代2.0T涡轮增压直喷发动机中得以尽情展示。<br>
+                少数豪华品牌才装备的电控涡轮增压技术，<br>
+                可实现 1000rpm超低转速涡轮介入，扭矩输出最高达到355N•m，<br>
+                与7速湿式双离合变速器实现完美匹配，<br>
+                让您在轻快迅捷的驾驭体验中，释放青春的爆发力！
+            </div>
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_ck/bg_05.jpg"/>
+        <div class="txt txt4">
+            <div class="txt_title">
+                8.9s破百 ◆ 挑战你的 运动底线
+            </div>
+            <div class="txt_content">
+                2.0T + 7DCT黄金动力组合实现0-100km/h 8.9s加速时间，动力强劲不惧挑战，<br>
+                让你在8.9s的极速中体验年轻的运动极限。
+            </div>
+        </div>
+    </div>
+    <div class="img_box">
+        <img src="images/vv5_ck/bg_06.jpg"/>
+        <div class="txt_title title1">
+            最佳的动力状态 ◆ 最低的油耗状态 最佳,最低
+        </div>
+        <div class="txt_content content1">
+            VV5采用国际专家团队自主研发的湿式双离合7速变速箱，以更高的可靠性，成熟的技术，有效提升燃油的经济性，<br>
+            让你在享受卓越的加速感的同时，完全不用担心油耗问题！
+        </div>
+    </div>
+    <div class="jing_xs">
+        <div class="jxs">
+            <div class="jxs_title">
+                查找最近经销商
+            </div>
+            <p>
+                无论你身在何处，通过WEY网络，即可更快更方便地找到您的首选经销商，轻松享受各项专属服务
+            </p>
+            <select id="one" onchange="func(this.value)" class="liandong">
+                <option value="">省/市</option>
+                <option value="0">浙江省</option>
+                <option value="1">广东省</option>
+                <option value="2">福建省</option>
+                <option value="3">四川省</option>
+            </select>
+            <select id="two" class="liandong1">
+                <option value="">市/区</option>
+            </select>
+        </div>
+    </div>
+</section>
+<script>
+    /*省市联动*/
+    var two = document.getElementById('two');
+    city = [];//申明
+    //定义二级数据
+    city[0] = ['杭州市',"宁波市","温州市","嘉兴市"];
+    city[1] = ['广州市',"东莞市","珠海市","汕头市"];
+    city[2] = ['厦门市',"福州市","三明市","泉州市"];
+    city[3] = ['成都市',"南充市","绵阳市","德阳市"];
+    function func(m){
+        two.length = 1;
+        //遍历生产option选项
+        for (var i = 0; i < city[m].length; i++) {
+
+            //创建一个option 把数据存储在option
+            var op = new Option(city[m][i],i);
+
+            //把带有数据的option 添加到第二个select
+            two.add(op);
+        }
+    }
+</script>
+<!--回到顶部-->
+<div id="test" style=" position:fixed; right:0;bottom:50px;">
+    <img src="images/top.png"/></div>
+<script>
+    document.getElementById("test").onclick = function(){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+</script>
+<!--引用外部foot文件-->
+<embed src="foot.html" width="100%" height="322" id="foot_w"></embed>
+</body>
+</html>
